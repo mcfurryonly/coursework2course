@@ -1,21 +1,18 @@
-package proskycoursework2course;
+package proskycoursework2course.service;
 
 import org.springframework.stereotype.Service;
+import proskycoursework2course.exceptions.NullCollectionException;
+import proskycoursework2course.Question;
+import proskycoursework2course.interfaces.QuestionService;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 @Service
-public class JavaQuestionService implements QuestionService{
+public class JavaQuestionService implements QuestionService {
 
-
-    public JavaQuestionService(Set<Question> questions) {
-
-        this.questions = questions;
-    }
-
-   private Set<Question> questions = new HashSet<>(Set.of(
+   public static Set<Question> questions = new HashSet<>(Set.of(
             new Question("вопрос 1", "ответ 1"),
             new Question("вопрос 2", "ответ 2"),
             new Question("вопрос 3", "ответ 3"),
