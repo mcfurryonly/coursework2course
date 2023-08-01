@@ -1,4 +1,6 @@
-package proskycoursework2course;
+package proskycoursework2course.interfaces;
+
+import proskycoursework2course.Question;
 
 import java.util.Collection;
 
