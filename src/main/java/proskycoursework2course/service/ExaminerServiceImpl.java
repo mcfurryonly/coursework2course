@@ -21,7 +21,7 @@ public class ExaminerServiceImpl implements ExaminerService {
 
     @Override
     public List<String> getQuestions(int amount) {
-        questionsList.clear();
+       // questionsList.clear();
         validateQuantityQuestions(amount);
         int originalQuestionsCounter = 1;
         while (originalQuestionsCounter <= amount) {
@@ -45,7 +45,7 @@ public class ExaminerServiceImpl implements ExaminerService {
 
 
     private void validateQuantityQuestions(int amount) {
-        if (amount < questionService.getAll().size() || amount > 0) {
+        if (amount > questionService.getAll().size() || amount < 0) {
             throw new AmountOutOfCollectionBoundException();
         }
     }

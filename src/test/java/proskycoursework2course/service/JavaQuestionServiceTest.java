@@ -54,7 +54,7 @@ class JavaQuestionServiceTest {
         System.out.println(javaQuestionService.getAll());
 
         System.out.println(DATASET);
-        assertIterableEquals(actual, expected);
+        assertEquals(expected, actual);
 
     }
 }
